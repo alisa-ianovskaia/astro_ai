@@ -1,7 +1,10 @@
 .*
+__*
 !/.gitignore
 
-cred.py
-urls.py
-utils
-daily_texts
+data_gathering/cred.py
+data_gathering/urls.py
+data_gathering/utils
+data_gathering/daily_texts
+data_gathering/.*
+data_gathering/__*
