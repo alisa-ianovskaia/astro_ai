@@ -3,6 +3,7 @@ from datetime import date
 from typing import NoReturn
 import psycopg2
 import os
+import sys
 
 from cred import *
 
@@ -43,3 +44,5 @@ def load_data_to_db(source_id) -> NoReturn:
     # Commit changes and close connection
     conn.commit()
     conn.close()
+
+load_data_to_db(sys.argv[1])

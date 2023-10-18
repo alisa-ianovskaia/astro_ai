@@ -8,3 +8,5 @@ data_gathering/utils
 data_gathering/daily_texts
 data_gathering/.*
 data_gathering/__*
+
+datasets
