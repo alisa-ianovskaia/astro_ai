@@ -1,9 +1,10 @@
 .*
 __*
+*.out
 !/.gitignore
 
 data_gathering/cred.py
-data_gathering/urls.py
+data_gathering/links.py
 data_gathering/utils
 data_gathering/daily_texts
 data_gathering/.*

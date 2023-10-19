@@ -7,7 +7,6 @@ import sys
 
 from cred import *
 
-
 # functions
 def generate_insert_query(date, sign_id, source_id, text) -> str:
     return f'''INSERT INTO horoscopes(hor_date, sign, source, hor_text) 
@@ -45,4 +44,5 @@ def load_data_to_db(source_id) -> NoReturn:
     conn.commit()
     conn.close()
 
+# call function with the source argument to be passed
 load_data_to_db(sys.argv[1])
