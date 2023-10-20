@@ -9,6 +9,10 @@ from utils import preprocess_text
 from links import *
 from get_data import *
 
+def generate_urls(source_id:int) -> list:
+    match source_id:
+        case 1: 
+       
 
 def write_to_file(horoscope, file) -> NoReturn:
     with open(file, 'w') as f:
