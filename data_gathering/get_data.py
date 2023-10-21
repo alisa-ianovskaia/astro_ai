@@ -1,19 +1,8 @@
-import requests
-from bs4 import BeautifulSoup
+from generate_urls import *
+from get_page import *
 
-def get_html_page(url, headers) -> str:
-    """Returns html code of a page for given URL"""
-    response = requests.get(url, headers=headers)
-    if response.status_code == 200:
-        return response.text
-    return None
+def get_data(source_id:str) -> dict:
+    urls_list = generate_urls(source_id)
 
-def get_horoscope(page_code) -> str:
-    """Returns horoscope text from html page code"""
-    try:
-        soup = BeautifulSoup(page_code, features="html.parser")
-        paragraph = soup.select('.main-horoscope p')
-        text = paragraph[0].text.split('-')[1].strip()
-        return text
-    except Exception:
-        return None 
+    for url in urls_list:
+        page = get_page(url)
