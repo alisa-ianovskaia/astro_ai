@@ -26,7 +26,7 @@ def load_data_to_db(data:dict, source_id:str) -> NoReturn:
             prep_text = preprocess_text(text)
             query = generate_insert_query(todays_date, sign_id, source_id, prep_text)
             cursor.execute(query)
-            print(f'Processing text {sign_id}...')
+            print(f'Writing text {sign_id} to DB...')
         else:
             print('There is no text to write to DB.')
 
