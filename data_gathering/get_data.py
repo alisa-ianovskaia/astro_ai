@@ -16,9 +16,13 @@ def get_data(source_id:str) -> dict:
     for i, url in enumerate(urls_list):
         page_code = get_page(url)
         text = get_horoscope_text(page_code, source_id)
+        current_num = i + 1
 
-        horoscopes_dict[str(i)] = text
+        horoscopes_dict[str(current_num)] = text
 
+        # print 
+        print(f'Got text {current_num} from source_id:{source_id}, {text} characters.')
+        
         # wait
         time.sleep(random.randint(3, 16))
 
