@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from utils import preprocess_text_source_3
 
 def get_horoscope_text(page_code:str, source_id:str) -> str:
     """Returns horoscope text from html page code"""
@@ -13,7 +14,8 @@ def get_horoscope_text(page_code:str, source_id:str) -> str:
             text = paragraph.text.strip()
 
         elif source_id == '3':
-            pass
+            paragraph = soup.select('p.body')[0]
+            text = preprocess_text_source_3(paragraph.text)
         elif source_id == '4':
             pass
         elif source_id == '5':
