@@ -8,4 +8,6 @@ def get_page(url:str) -> str:
     
     if response.status_code == 200:
         return response.text
+    
+    print(f'Something went wrong. The response status: {response.status_code}')
     return None

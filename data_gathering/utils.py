@@ -1,7 +1,7 @@
 from datetime import date
 
-def preprocess_text_source_3(text:str) -> str:
-    '''Preprocesses text from source 3 and returns only horoscope.'''
+def preprocess_soup(text:str) -> str:
+    '''Preprocesses text from source 3 and 1 and returns only horoscope.'''
     # get rid of everything after the horoscope
     text = text.split('\n')[0]
     
@@ -12,7 +12,7 @@ def preprocess_text_source_3(text:str) -> str:
 
     return text[index_to_cut:].strip() 
 
-def preprocess_text(text) -> str:
+def preprocess_text(text:str) -> str:
     '''Replaces apostroth with the double one'''
     return text.replace("'", "''")
 
