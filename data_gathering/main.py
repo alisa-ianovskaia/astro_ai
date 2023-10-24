@@ -8,4 +8,5 @@ def main(source_id) -> NoReturn:
     data = get_data(source_id)
     load_data_to_db(data, source_id,)
 
-main(sys.argv[1])
+for i in range(1,6):
+    main(str(i))

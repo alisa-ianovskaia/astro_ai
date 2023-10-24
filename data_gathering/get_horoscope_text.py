@@ -7,8 +7,7 @@ SOURCES_SELECTORS_MAP = {
     '2': '.entry-content p',
     '3': 'p.body',
     '4': 'article[data-qa="main"] p.mt-sm',
-    '5': '#main-content > div > .article-container \
-             > div[data-journey-body="standard-article"] > p'
+    '5': '#main-content > div > .article-container > div[data-journey-body="standard-article"] > p'
 }
 
 def get_horoscope_text(page_code:str, source_id:str) -> str:

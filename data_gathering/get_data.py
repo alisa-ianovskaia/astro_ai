@@ -21,8 +21,7 @@ def get_data(source_id:str) -> dict:
         horoscopes_dict[str(current_num)] = text
 
         # print 
-        print(f'Got text: {current_num} from source_id: {source_id}, \
-               total {len(text)} characters.')
+        print(f'Got text: {current_num} from source_id: {source_id}, total {len(text)} characters.')
         
         # wait
         time.sleep(random.randint(3, 16))

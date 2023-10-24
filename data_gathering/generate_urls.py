@@ -18,13 +18,13 @@ def generate_urls(source_id:str) -> list:
         for n in range(1, 13):
             urls.append(SOURCES_URLS_MAP[source_id] + str(n))
     
-    elif (source_id == '2') | (source_id == '4'):
+    elif (source_id == '2') | (source_id == '3'):
         url_first_part = SOURCES_URLS_MAP[source_id][0]
         url_second_part = SOURCES_URLS_MAP[source_id][1]
         for sign in SIGNS:
             urls.append(url_first_part + sign + url_second_part)
     
-    elif source_id == '3':
+    elif source_id == '4':
         for sign in SIGNS:
             urls.append(SOURCES_URLS_MAP[source_id] + sign)
     
